@@ -1,0 +1,106 @@
+\RequirePackage[l2tabu,orthodox]{nag}
+
+\documentclass[msthesis,justified,copyright,final,numbers,sort&compress,
+gsmodern,amstex,natbib]{uothesis}
+
+\usepackage[english,UKenglish]{babel}
+
+% Set fonts
+\usepackage[MnSymbol]{mathspec}
+\usepackage{xltxtra}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xecolor}
+\defaultfontfeatures{Ligatures=TeX, Scale=MatchLowercase}
+\setprimaryfont{Minion Pro}
+\setmainfont[Mapping=tex-text,Numbers=OldStyle,Kerning=Uppercase,
+	SizeFeatures={%
+       		 {Size={-8.4},Font=* Caption},
+        		{Size={8.41-13.0},Font=*},
+        		{Size={13.01-19.9},Font=* Subhead},
+        		{Size={19.91-},Font=* Display}}]
+	{Minion Pro}
+\setsansfont[Mapping=tex-text]{Myriad Pro}
+\setmonofont{Lucida Typewriter Std}
+\setmathsfont[Set=Greek,Uppercase=Italic,Lowercase=Italic]{Minion Pro}
+\usepackage[stretch=10,final,babel,protrusion]{microtype}
+
+% Other packages
+\usepackage{titlesec}
+
+%\input{custom_cmds.tex}
+%THESIS FRONT MATTER
+%TITLES.
+\covertitle{Document Title As it will appear on\\ the cover page}
+\abstracttitle{Document Title: As it will appear on the abstract page}
+%AUTHOR
+\author{Nicholas Chaimov}
+%DEPARTMENT
+\narrowdepartment{Department of Computer \& Information Science}
+\department{Department of Computer \& Information Science}
+%DEGREE INFORMATION
+\degreetype{Master of Science}
+\degreemonth{June}
+\degreeyear{2012}
+%COMMITTEE INFORMATION
+\advisor{}
+\chair{Allen Malony}
+\committee{}
+\graddean{Richard Linton}
+%CURRICULUM VITAE
+%\include{thesis_cv}
+%ACKNOWLEDGEMENTS
+%\include{thesis_acknowledgements}
+%DEDICATION (optional)
+%\include{thesis_dedication}
+%ABSTRACT
+%\include{thesis_abstract}
+
+\abstract{Test Abstract}
+\acknowledge{Test Acknowledge}
+
+%Main Document
+\begin{document}
+\maketitle
+%CHAPTERS
+%\include{introduction}
+%\include{chapter_2}
+
+\titleformat{name=\chapter}[block]
+  {\Large\centering\bf} % format
+  {CHAPTER \Roman{chapter} \\} % label
+  {10pt} %sep
+  {} %before
+  {} %after
+  
+\titleformat{name=\section}[hang]
+  {\bf} % format
+  {\arabic{chapter}.\arabic{section}.\ } % label
+  {10pt} %sep
+  {} %before
+  {} %after
+  
+\titleformat{name=\subsection}[hang]
+  {\bf} % format
+  {\arabic{chapter}.\arabic{section}.\arabic{subsection}\ } % label
+  {10pt} %sep
+  {} %before
+  {} %after
+
+
+
+\chapter{The First Chapter}
+\section{Section One}
+Hello World!
+\subsection{Subsection zomg}
+Foo bar baz. $\alpha = \beta$
+
+
+%APPENDICES
+\appendix
+%\include{tappendix_1}
+
+%REFERENCES
+\bibliographystyle{unsrtnat}
+\bibliography{bib}
+\end{document}
