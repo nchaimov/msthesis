@@ -91,7 +91,7 @@
 \fi\fi
 \LoadClass{report}
 \RequirePackage{float}
-\RequirePackage{subfig}
+\RequirePackage{caption}
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{graphicx}
 \RequirePackage{setspace}
@@ -393,10 +393,9 @@ This \@papertype\ has been accepted and approved
 \if@cochair
 \@cochair& Co-chair\\
 \fi
-\@advisor & Advisor\\
 \@committee\\
 and & \\ \\
-\@graddean & Vice President for Research \& Innovation/ Dean of the Graduate School
+\@graddean & Vice President for Research \& Innovation/Dean of the Graduate School
 \end{tabular}\\*[\baselineskip]
 Original approval signatures are on file with the
 University of Oregon Graduate School.\\*[\baselineskip]
@@ -424,13 +423,6 @@ Degree awarded \@degreemonth ~\thedegreeyear
 \@department\\*[\baselineskip]
  \@degreemonth ~\thedegreeyear\\*[\baselineskip]
 Title: \@abstracttitle\\*[\baselineskip]
-\parbox[t]{5in}{\raggedright
-\if@cochair
-\@sigline{3.5in}{\hspace*{1.5in}\@advisor, Co-chair}\\*[\baselineskip]
-\@sigline{3.5in}{\hspace*{1.5in}\@cochair, Co-chair}
-\else
-\@sigline{3.5in}{\hspace*{1.5in}\@advisor}
-\fi}\\*[2\baselineskip]
 \end{spacing}
 \ifjustified\else\RaggedRight\fi
 \@abstract}
@@ -507,9 +499,8 @@ Title: \@abstracttitle\\*[\baselineskip]
 \everypar={\parskip=0.75\baselineskip
 \hangindent=\@cvhangindent
                 \interlinepenalty=\@M}
-\cvitem{PROFESSIONAL EXPERIENCE}{\@experience}
+%\cvitem{PROFESSIONAL EXPERIENCE}{\@experience}
 \cvitem{GRANTS, AWARDS AND HONORS}{\@awards}
-\cvitem{PUBLICATIONS}{\@publications}
 \par
 \end{singlespacing}}
 
