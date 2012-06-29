@@ -913,7 +913,8 @@ extra appendices; rerun LaTeX}
 \newcommand{\@bibsection}[1]{
 \clearpage
 \addcontentsline{toc}{chapter}{#1}
-\@startchapter{#1}
+{\Large\bf
+\@startchapter{#1}}
 \ifnum \c@citation > 0
 \centering
 \setlength\fboxsep{10pt}
@@ -939,9 +940,9 @@ extra appendices; rerun LaTeX}
 \raggedright
 \sfcode`\.=1000\relax}
 \let\endthebibliography=\endlist
-%%\newcommand{\formatbib}{
-%% \addcontentsline{toc}{chapter}{REFERENCES CITED}
-%% \renewcommand\bibname{REFERENCES CITED}}
+%\newcommand{\formatbib}{
+% \addcontentsline{toc}{chapter}{REFERENCES CITED}
+% \renewcommand\bibname{REFERENCES CITED}}
 \AtEndOfClass{\renewcommand\bibname{REFERENCES CITED}}
 
 \def\thefigure{\@arabic\c@figure}

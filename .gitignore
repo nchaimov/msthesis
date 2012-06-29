@@ -24,4 +24,6 @@
 .DS_Store
 *.pdf
 *.swp
+*.fls
+*latexmk
 *~
